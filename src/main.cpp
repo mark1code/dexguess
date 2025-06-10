@@ -112,7 +112,6 @@ bool playGame(const std::vector<Pokemon>& pokeInfo){
         std::string guess;
         std::cout << "Guess the Pokémon: ";
         std::getline(std::cin, guess);
-        attempts++;
         // answer
         //std::cout << pokeInfo[index].name << std::endl;
         
@@ -141,6 +140,8 @@ bool playGame(const std::vector<Pokemon>& pokeInfo){
             std::cout << "Stat Total: Lower 🔽" << std::endl;
         }
         std::cout << "Best Stat: " << (target.bestStat == guessmon->bestStat ? guessmon->bestStat + " ✅" : "❌") << "\n" << std::endl;
+
+        attempts++;
     }
 
 
